@@ -1,0 +1,20 @@
+{% extends '../_layout.html' %} 
+{% block head %}
+<title>首页</title>
+{% endblock %} {% block content %}
+
+<!-- products -->
+<div ms-controller="content" class="content">
+	<link rel="import" href="/modules/ui/banner/banner.html?__inline">
+	<h3><span class="glyphicon glyphicon-bookmark"></span>efis-pure-template</h3>
+	<h4>目录规范说明</h4>
+	<div ms-visible="loading" ms-widget="loading" data-loading-type="spinning-bubbles" style="width:150px;height:150px;position:relative;zoom:1;"></div>
+
+	<img ms-visible="!loading" src="/modules/pages/index/images/folder-intro.png" alt="">
+</div>
+<!-- /products -->
+<script>
+	require('pages/index')
+</script>
+
+{% endblock %}

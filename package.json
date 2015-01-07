@@ -1,0 +1,16 @@
+{
+  "name": "efis-pure-template",
+  "version": "0.1.0",
+  "description": "efis-pure-template - based on efis.",
+  "keywords": [
+    "fis",
+    "efis",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scott-wong/efis-pure-template.git"
+  },
+  "author": "scott-wong",
+  "license": "MIT"
+}

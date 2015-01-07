@@ -1,0 +1,137 @@
+@import url(variables.less);
+@import url(mixins.less);
+
+/**
+ * 非大面积文字排版网站通常不需要列表项，如果需要可单独设置
+ */
+ul, ol {
+    list-style-type: none;
+    list-style-image: none;
+}
+/**
+ * 中文优先使用冬青黑体简体(OS X)、微软雅黑(Windows)和文泉驿微米黑(Linux)
+ * 西文使用 tahoma
+ * 1. 防止元素中「font-family」不能继承
+ * 2. 西文字体和 OS X 字体写在前面
+ * 3. Opera 12.1 之前版本不支持中文字体的英文名称
+ * 4. 微软雅黑「\5FAE\8F6F\96C5\9ED1」,中易宋体「\5B8B\4F53」
+ */
+body,
+button, /* 1 */
+input, /* 1 */
+select, /* 1 */
+textarea  /* 1 */
+{
+    font-family: 'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei','microsoft yahei',sans-serif;
+    -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis; /* 5 */
+    text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis; /* 5 */
+}
+/**
+ * 1. 去除 IE6-9 和 Firefox 3 中 a 内部 img 元素默认的边框
+ * 2. 修正 IE8 图片消失bug
+ * 3. 防止 img 指定「height」时图片高度不能按照宽度等比缩放，导致图片变形
+      http://jsbin.com/aJoTUca/2
+ * 4. 让图片支持响应式
+ * 5. 去除现代浏览器图片底部的空隙
+ * 6. 修复 IE7 图片缩放失真
+ */
+img {
+    border: 0 none; /* 1 */
+    width: auto\9; /* 2 */
+    height: auto; /* 3 */
+    max-width: 100%; /* 4 */
+    vertical-align: top;/* 5 */
+    -ms-interpolation-mode: bicubic; /* 6 */
+}
+
+/* avalon improve */
+[ms-controller], [ms-important], .ms-controller, .ms-important {
+    visibility: hidden;
+}
+.oni-datepicker-input-wrapper {
+    span{
+        padding-left: 5px;
+    }
+    input {
+        color:#000;
+        box-sizing: content-box;
+    }
+}
+body {
+    background: #f6f6f6;
+    font-family: 'Microsoft Yahei';
+}
+.form-control, .btn, .alert {
+    border-radius: 0;
+}
+.m-0 {
+    margin: 0 auto;
+}
+.m-10 {
+    margin: 10px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.pt-10 {
+    padding-top: 10px;
+}
+.pl-15 {
+    padding-left: 15px;
+}
+.pl-50 {
+    padding-left: 50px;
+}
+.bl{
+    border-left: 1px solid #eee;
+}
+.text-center {
+    text-align: center;
+}
+.nodata {
+    width: 130px;
+    height: 30px;
+    background: url(nodata.png) no-repeat center;
+    margin: 5px auto;
+}
+.headimg{
+    width:40px;
+    height: 40px;
+}
+.c_green {
+    color: #5cb85c;
+}
+.c_red {
+    color: red;
+}
+.c-orange {
+    color: @orange;
+
+}
+.c-blue {
+    color: @blue;
+
+}
+.font-large{
+    font-size: 1.5em;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    .opacity(0.6);
+    z-index: 100;
+}

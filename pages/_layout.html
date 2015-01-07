@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- !#支持Google爬虫  -->
+    <meta name="fragment" content="!" />
+    <meta name="keywords" content="efis">
+    <meta name="description" content="efis">
+    <meta name="author" content="efis">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" data-fixed='true' href="/static/bootstrap/css/bootstrap.css">
+    <script src="/static/mod/mod.js"></script>
+    <script src="/static/jquery/jquery.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/static/html5shiv/html5shiv.min.js"></script>
+    <script src="/static/respond/respond.min.js"></script>
+    <![endif]-->
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <link rel="import" href="/modules/ui/header/header.html?__inline">
+    <div class="container">
+        {% block content %}{% endblock %}
+        <hr>
+        <link rel="import" href="/modules/ui/footer/footer.html?__inline">
+    </div>
+</body>
+
+</html>
