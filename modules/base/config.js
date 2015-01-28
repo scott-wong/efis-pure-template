@@ -6,11 +6,11 @@ var c = {
     api: {
         banner: __uri('/tests/banners.json')
     }
-};
+}
 
 //debug
 if (location.href.indexOf('8080') > -1) {
-    c.name = 'efis-pure-template-dev';
+    c.name += '-dev'
 }
 
-window.config = c;
+window.config = c

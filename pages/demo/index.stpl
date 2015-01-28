@@ -1,0 +1,26 @@
+{% extends '../_layout.html' %} {% block head %}
+<title>首页</title>
+{% endblock %} {% block content %}
+
+<div ms-controller="content" class="content">
+    <link rel="import" href="/modules/ui/banner/banner.html?__inline">
+    <h3><span class="glyphicon glyphicon-bookmark"></span>efis-pure-template</h3>
+    <div id="uploader" class="wu-example">
+        <!--用来存放文件信息-->
+        <div id="thelist" class="uploader-list"></div>
+        <div class="btns">
+            <div id="picker">选择文件</div>
+            <button id="ctlBtn" class="btn btn-default">开始上传</button>
+        </div>
+    </div>
+
+    <h4>目录规范说明</h4>
+    <div ms-visible="loading" ms-widget="loading" data-loading-type="spinning-bubbles" style="width:150px;height:150px;position:relative;zoom:1;"></div>
+
+    <img ms-visible="!loading" src="/modules/pages/demo/images/folder-intro.png" alt="">
+</div>
+<script>
+require('pages/demo')
+</script>
+
+{% endblock %}

@@ -22,7 +22,7 @@ input, /* 1 */
 select, /* 1 */
 textarea  /* 1 */
 {
-    font-family: 'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei','microsoft yahei',sans-serif;
+    font-family: 'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei','microsoft yahei',simsun,sans-serif;
     -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis; /* 5 */
     text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis; /* 5 */
 }
@@ -43,11 +43,16 @@ img {
     vertical-align: top;/* 5 */
     -ms-interpolation-mode: bicubic; /* 6 */
 }
-
-/* avalon improve */
-[ms-controller], [ms-important], .ms-controller, .ms-important {
-    visibility: hidden;
+textarea {
+    resize: vertical;
 }
+small {
+    font-size: 85.7%; /* 12/14=0.8571428571 */
+}
+label {
+    cursor: pointer;
+}
+/* avalon datepicker for bootstrap*/
 .oni-datepicker-input-wrapper {
     span{
         padding-left: 5px;
@@ -57,9 +62,21 @@ img {
         box-sizing: content-box;
     }
 }
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    .opacity(0.6);
+    z-index: 100;
+}
+
+/*定制样式 可删除*/
 body {
     background: #f6f6f6;
-    font-family: 'Microsoft Yahei';
 }
 .form-control, .btn, .alert {
     border-radius: 0;
@@ -73,40 +90,16 @@ body {
 .mt-10 {
     margin-top: 10px;
 }
-.mt-20 {
-    margin-top: 20px;
-}
 .mr-10 {
     margin-right: 10px;
 }
-.mb-10{
+.mb-10 {
     margin-bottom: 10px;
 }
-.pt-10 {
-    padding-top: 10px;
+.ml-10{
+    margin-left: 10px;
 }
-.pl-15 {
-    padding-left: 15px;
-}
-.pl-50 {
-    padding-left: 50px;
-}
-.bl{
-    border-left: 1px solid #eee;
-}
-.text-center {
-    text-align: center;
-}
-.nodata {
-    width: 130px;
-    height: 30px;
-    background: url(nodata.png) no-repeat center;
-    margin: 5px auto;
-}
-.headimg{
-    width:40px;
-    height: 40px;
-}
+
 .c_green {
     color: #5cb85c;
 }
@@ -115,23 +108,7 @@ body {
 }
 .c-orange {
     color: @orange;
-
 }
 .c-blue {
     color: @blue;
-
-}
-.font-large{
-    font-size: 1.5em;
-}
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    .opacity(0.6);
-    z-index: 100;
 }

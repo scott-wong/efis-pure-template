@@ -55,8 +55,6 @@ http://cssshrink.com/
 
 .oni-helper-noselect {
     -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
     user-select: none;
 }
 
@@ -92,8 +90,6 @@ html .oni-helper-max-index, body .oni-helper-max-index {
 
 .oni-icon {
     -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
     user-select: none;
     cursor: default;
     font-family: fontawesome !important;
@@ -112,4 +108,9 @@ a .oni-icon, .oni-btn .oni-icon {
 
 .oni-state-error {
     border: 1px solid #ff8888;
+}
+
+/* avalon improve */
+[ms-controller], [ms-important], .ms-controller, .ms-important {
+    visibility: hidden;
 }

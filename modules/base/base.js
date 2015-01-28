@@ -1,11 +1,5 @@
 require('base/config')
 
-window.console = window.console || (function() {
-    var c = {}
-    c.log = c.warn = c.debug = c.info = c.error = c.time = c.dir = c.profile = c.clear = c.exception = c.trace = c.assert = function() {}
-    return c
-})()
-
 /*!
  * IE10 viewport hack for Surface/desktop Windows 8 bug
  * Copyright 2014 Twitter, Inc.
@@ -28,20 +22,6 @@ window.console = window.console || (function() {
         document.querySelector('head').appendChild(msViewportStyle)
     }
 
-})()
-
-//fix ie indexOf
-;(function() {
-    if (!Array.indexOf) {
-        Array.prototype.indexOf = function(obj) {
-            for (var i = 0; i < this.length; i++) {
-                if (this[i] == obj) {
-                    return i
-                }
-            }
-            return -1
-        }
-    }
 })()
 
 //ie8&ie9支持CORS
